@@ -6,11 +6,14 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Théo - Logiciel de planification de cours</title>
+		<link rel="shortcut icon" href="/images/logo.png" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/changeLanguage.js"></script>
+
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -22,8 +25,16 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/logo.png" alt="logo" /></span><span class="title">Théo Portfolio</span>
 								</a>
+
+							<!-- Language Selector -->
+							<div class="language-selector">
+								<select id="language" onchange="changeLanguage(this.value)">
+									<option value="fr">Français</option>
+									<!-- <option value="en">English</option> -->
+								</select>
+							</div>
 
 							<!-- Nav -->
 								<nav>
@@ -42,18 +53,40 @@
 						<li><a href="index.html">Accueil</a></li>
 						<li><a href="cv.html">CV</a></li>
 						<li><a href="contact.html">Contact</a></li>
-						<li><a href="elements.html">Éléments</a></li>
 					</ul>
 				</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>"Transfer Learning" en finance</h1>
+							<span class="image main"><img src="images/banner_03.jpeg" alt="" /></span>
+							<h2>Description du projet</h2>
+							<p>
+								Ce projet a été réalisé en binôme dans le cadre académique du projet de fin d'étude de <a href="https://www.telecom-sudparis.eu/" target="_blank">Télécom SudParis</a>.
+								L'objectif de ce projet a été de comprendre le sujet du "transfer learning" (ou apprentissage par transfert) dans sa globalité. Puis, nous nous sommes
+								concentrés sur l'article de Chen et al. <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-9/issue-1/Data-enriched-linear-regression/10.1214/15-EJS1027.full" target="_blank"><i>Data enriched linear regression</i></a>
+								qui propose une régression linéaire modifiée pour le transfer learning de type instance-based (connaissance transférée au niveau des jeux de données). Pour définir simplement
+								le transfer learning, on peut dire que c'est le principe de recycler la connaissance d'un domaine source vers un domaine cible. Dans notre cas d'application,
+								le but a été d'utiliser le jeu de données du cours de l'action IBM (de 1962 à 2023) comme domaine source afin d'améliorer la prédiction du cours de l'action
+								HPE (de 2015 à 2023) comme domaine cible. Ainsi, nous avons implémenté la méthode de régression linéaire TL (pour Transfer Learning) en Python afin d'améliorer
+								la prédiction du cours HPE. Cela n'a pas amélioré la qualité des prédictions car la méthode de régression linéaire est trop simpliste pour décrire un processus
+								stochastique. Ainsi, sur les conseils de notre tutrice, nous avons exploré la possibilité d'utiliser l'objet mathématique signature qui est souvent utilisé pour extraire
+								des ensembles de caractéristiques essentielles des données. Par manque de temps, nous n'avons pas pu l'incorporer au modèle de prédiction mais la littérature scientifique
+								semble encourageante à ce sujet.
+								Le code est disponible sur GitHub à l'aide du lien ci-dessous.
+							</p>
+							<a href="https://github.com/theoblc/transfer-learning-sp500" target="_blank" class="button primary fit">
+								<div class="icon brands style1 fa-github">GitHub</div>
+							</a>
+							<br>
+							<br>
+							<h2>Résultats</h2>
+							<span class="image main"><img src="images/data_enriched_test.png" alt="" /></span>
+							Deux graphes correspondant aux tests des modèles de regréssion linéaire classique et enrichie. Ces deux modèles ont été entraînés sur le cours de fermeture de HP
+							entre 2015-10-19 et 2017-01-01 (<code>n=304</code> données). Le modèle enrichi a été entraîné en plus sur les données de l'entreprise IBM (de 1962-01-02 à 2017-01-01 :
+							<code>N=13846</code> données). Les données ont été prétraitées avec un décalage <code>L=10</code> dans le temps qui correspond donc au nombre de features (<code>d=10</code>). Le graphe (a) 
+							correspond à la régression linéaire classique. Le graphe (b) correspond à la régression linéaire enrichie.
 						</div>
 					</div>
 
