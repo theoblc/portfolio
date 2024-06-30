@@ -59,7 +59,43 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Coming soon...</h1>
+							<h1>DNN from scratch</h1>
+							<span class="image main"><img src="images/banner_04.png" alt="" /></span>
+							<h2>Description du projet</h2>
+							<p>
+								Ce projet a été réalisé dans le cadre académique de <a href="https://www.telecom-sudparis.eu/" target="_blank">Télécom SudParis</a>.
+								L'objectif de ce projet a été de développer un Deep Neural Network sur Numpy afin qu'il puisse classifier les chiffres provenant de la base 
+								de données MNIST. Le projet se divise en trois étapes d'implémentation : le RBM (Restricted Boltzmann Machine), le DBN (Deep Belief Network)
+								et pour finir le DNN (Deep Neural Network).
+								
+							</p>
+							<p>Le code est disponible sur GitHub à l'aide du lien ci-dessous.</p>
+							<a href="https://github.com/theoblc/dnn-from-scratch" target="_blank" class="button primary fit">
+								<div class="icon brands style1 fa-github">GitHub</div>
+							</a>
+							<br>
+							<br>
+							<h2>Résultats</h2>
+							<div class="row gtr-uniform">
+							
+								<div class="col-6"><br><br><span class="image fit"><img src="images/MNIST.jpg" alt="" /></span></div>
+								<div class="col-6"><span class="image fit"><img src="images/dnn_fig1.png" alt="" /></span></div>
+								<div class="col-6"><span class="image fit"><img src="images/dnn_fig2.png" alt="" /></span></div>
+								<div class="col-6"><span class="image fit"><img src="images/dnn_fig3.png" alt="" /></span></div>
+							</div>
+							<p>
+							Trois graphes correspondant aux résultats du DNN sur MNIST. L'ordonnée correspond au taux d'erreur de classification, c'est-à-dire le pourcentage de mauvaises
+							classifications (mauvais chiffre détecté) par rapport à tous les tests.
+							<p>Le premier graphe en partant de la gauche étudie l'impact de la profondeur du DNN en conservant
+							les autres paramètres fixes à 200 neurones par couche et 10000 données d'entraînement. Le nombre de couche varie de 2 à 9.
+							Le deuxième graphe se concentre sur le nombre
+							de neurones par couche de 100 à 800 neurones. Encore une fois, les autres paramètres sont fixés à 2 couche et 10000 données d'entraînement.
+							Pour le troisième graphe, on
+							étudie l'impact du nombre de données d'entraînement de 1000 à 60000 pour un DNN à deux couches de 200 neurones.
+							Ces trois figures constituent une première exploration 
+							d'optimisation des hyperparamètres du DNN.
+							</p>
+						
 						</div>
 					</div>
 
