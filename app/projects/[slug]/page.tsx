@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FaGithub } from "react-icons/fa6";
 import { getProject, projects } from "../data";
+import { withBasePath } from "../../lib/asset-path";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -34,7 +35,7 @@ export default async function ProjectPage({
     <article className="py-16 px-4 max-w-4xl mx-auto w-full">
       <h1 className="text-4xl mb-6">{project.title}</h1>
       <div className="relative h-64 md:h-96 w-full mb-8 rounded-2xl overflow-hidden">
-        <Image src={project.image} alt={project.title} fill className="object-cover" priority />
+        <Image src={withBasePath(project.image)} alt={project.title} fill className="object-cover" priority />
       </div>
 
       <h2 className="text-2xl mb-4">Description du projet</h2>
@@ -64,7 +65,7 @@ export default async function ProjectPage({
             {project.gallery.map((item, i) => (
               <figure key={i}>
                 <div className="relative h-56 w-full rounded-2xl overflow-hidden">
-                  <Image src={item.src} alt={item.caption ?? project.title} fill className="object-contain" />
+                  <Image src={withBasePath(item.src)} alt={item.caption ?? project.title} fill className="object-contain" />
                 </div>
                 {item.caption && (
                   <figcaption className="text-sm opacity-70 mt-2">{item.caption}</figcaption>

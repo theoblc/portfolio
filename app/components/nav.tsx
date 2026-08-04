@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { navItems } from "../nav-items";
+import { withBasePath } from "../lib/asset-path";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,7 +35,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-10 w-10">
               <Image
-                src="/images/logo.png"
+                src={withBasePath("/images/logo.png")}
                 alt="Logo"
                 fill
                 sizes="40px"

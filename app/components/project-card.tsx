@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Project } from "../projects/data";
+import { withBasePath } from "../lib/asset-path";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -10,7 +11,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative h-48 w-full">
         <Image
-          src={project.image}
+          src={withBasePath(project.image)}
           alt={project.title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"

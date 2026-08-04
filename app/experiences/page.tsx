@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { experiences } from "../experiences-data";
+import { withBasePath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Expériences professionnelles",
@@ -17,7 +18,7 @@ export default function ExperiencesPage() {
         {experiences.map((exp) => (
           <div key={exp.company} className="flex flex-col sm:flex-row gap-6 items-start">
             <div className="relative h-16 w-16 shrink-0">
-              <Image src={exp.logo} alt={`${exp.company} logo`} fill className="object-contain" />
+              <Image src={withBasePath(exp.logo)} alt={`${exp.company} logo`} fill className="object-contain" />
             </div>
             <div>
               <h2 className="text-xl mb-2">

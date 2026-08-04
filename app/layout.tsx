@@ -5,6 +5,7 @@ import { Navbar } from "./components/nav";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
+import { withBasePath } from "./lib/asset-path";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const lora = Lora({ subsets: ["latin"], variable: "--font-serif" });
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/images/logo.png",
+    icon: withBasePath("/images/logo.png"),
   },
 };
 

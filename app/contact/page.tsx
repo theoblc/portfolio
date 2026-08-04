@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 import { socialLinks, contactInfo } from "../config";
+import { withBasePath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -13,7 +14,7 @@ export default function ContactPage() {
     <section className="py-16 px-4 max-w-3xl mx-auto w-full">
       <h1 className="text-4xl mb-8 text-center">Me contacter</h1>
       <div className="relative h-56 w-full rounded-2xl overflow-hidden mb-10">
-        <Image src="/images/Banniere_contact.png" alt="Bannière de contact" fill className="object-cover" />
+        <Image src={withBasePath("/images/Banniere_contact.png")} alt="Bannière de contact" fill className="object-cover" />
       </div>
 
       <div className="space-y-8">
