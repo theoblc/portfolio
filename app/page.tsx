@@ -14,7 +14,7 @@ export default function Page() {
           {metaData.title}
         </h1>
         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow">
-          Ingénieur, rêveur.
+          Ingénieur IA.
         </p>
       </div>
     </section>
