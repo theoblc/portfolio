@@ -10,7 +10,11 @@ export default function CvPage() {
     <section className="py-16 px-4 max-w-4xl mx-auto w-full text-center">
       <h1 className="text-4xl mb-4">Curriculum Vitæ</h1>
       <p className="opacity-80 mb-6">Veuillez trouver ici mon CV à télécharger.</p>
-      <a href="/images/CV_2024_FR.pdf" download="CV_theo_blanchonnet.pdf" className="inline-block mb-8">
+      <a
+        href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/CV_2024_FR.pdf`}
+        download="CV_theo_blanchonnet.pdf"
+        className="inline-block mb-8"
+      >
         <button>Télécharger le .pdf</button>
       </a>
       <div className="relative w-full" style={{ aspectRatio: "1 / 1.414" }}>
