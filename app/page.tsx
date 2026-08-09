@@ -6,7 +6,7 @@ export default function Page() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${withBasePath("/images/sunset.jpeg")})` }}
+        style={{ backgroundImage: `url(${withBasePath("/photos/sunset.jpg")})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
       </div>

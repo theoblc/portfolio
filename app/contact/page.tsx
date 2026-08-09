@@ -14,7 +14,7 @@ export default function ContactPage() {
     <section className="py-16 px-4 max-w-3xl mx-auto w-full">
       <h1 className="text-4xl mb-8 text-center">Me contacter</h1>
       <div className="relative h-56 w-full rounded-2xl overflow-hidden mb-10">
-        <Image src={withBasePath("/images/Banniere_contact.png")} alt="Bannière de contact" fill className="object-cover" />
+        <Image src={withBasePath("/banners/contact.png")} alt="Bannière de contact" fill className="object-cover" />
       </div>
 
       <div className="space-y-8">

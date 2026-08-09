@@ -12,7 +12,7 @@ export default function CvPage() {
       <h1 className="text-4xl mb-4">Curriculum Vitæ</h1>
       <p className="opacity-80 mb-6">Veuillez trouver ici mon CV à télécharger.</p>
       <a
-        href={withBasePath("/images/CV_2024_FR.pdf")}
+        href={withBasePath("/CV_2027_FR.pdf")}
         download="CV_theo_blanchonnet.pdf"
         className="inline-block mb-8"
       >
@@ -20,7 +20,7 @@ export default function CvPage() {
       </a>
       <div className="relative w-full" style={{ aspectRatio: "1 / 1.414" }}>
         <Image
-          src={withBasePath("/images/CV_2024_FR.png")}
+          src={withBasePath("/CV_2027_FR.png")}
           alt="Aperçu du CV de Théo Blanchonnet"
           fill
           className="object-contain rounded-2xl shadow-md"

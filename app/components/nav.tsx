@@ -35,7 +35,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-10 w-10">
               <Image
-                src={withBasePath("/images/logo.png")}
+                src={withBasePath("/logo.png")}
                 alt="Logo"
                 fill
                 sizes="40px"

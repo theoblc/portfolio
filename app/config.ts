@@ -1,8 +1,8 @@
 export const metaData = {
-  baseUrl: "https://theoblanchonnet.fr/",
+  baseUrl: "https://theoblc.github.io/portfolio/",
   title: "Théo Blanchonnet",
   name: "Théo",
-  ogImage: "/images/logo.png",
+  ogImage: "/opengraph-image.png",
   description:
     "Portfolio de Théo Blanchonnet - Projets, expériences et CV.",
 };
