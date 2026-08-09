@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
-import { experiences } from "../experiences-data";
+import { experiences } from "./data";
 import { withBasePath } from "../lib/asset-path";
 
 export const metadata: Metadata = {
@@ -73,6 +73,33 @@ export default function ExperiencesPage() {
                     </p>
                   ))}
                 </div>
+                {exp.projects && (
+                  <div className="grid sm:grid-cols-2 gap-4 mt-4">
+                    {exp.projects.map((project, i) => (
+                      <div
+                        key={i}
+                        className="bg-container dark:bg-dark_container rounded-xl p-4 shadow-sm"
+                      >
+                        <h3 className="text-sm font-semibold mb-1.5">{project.title}</h3>
+                        {project.skills && project.skills.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 mb-2.5">
+                            {project.skills.map((skill, si) => (
+                              <span
+                                key={si}
+                                className="text-xs px-2 py-0.5 rounded-md bg-black/5 dark:bg-white/10 opacity-80"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        <p className="opacity-80 text-sm leading-relaxed">
+                          {renderContent(project.description)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}

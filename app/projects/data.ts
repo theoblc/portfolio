@@ -11,6 +11,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "hotel-reservation-manager",
+    title: "Logiciel gestion d'hôtel",
+    image: "/project_imgs/hotel_reservation_screenshot.png",
+    summary:
+    "Développement d'une application Java pour créer et organiser les réservations d'un hôtel.",
+    description: [
+      "Ce projet a été réalisé en quadrinôme dans le cadre académique du cours PRO3600 de Télécom SudParis. L'objectif de ce projet a été de développer de zéro une application de gestion d'un hôtel. Tout d'abord, nous avons imaginé les besoins d'un hôtel en termes de logiciel. Puis, nous avons réalisé des maquettes afin que nous développions tous avec la même image en tête de l'application finale.",
+      "En termes de technologies, nous avons choisi de développer en Java et en JavaFX pour l'interface graphique. La base de données est hébergée sous MySQL.",
+    ],
+    githubUrl: "https://github.com/theoblc/hotel-reservation-manager",
+    gallery: [{ src: "/project_imgs/hotel_reservation_screenshot.png", caption: "Capture d'écran de l'application" }],
+  },
+  {
     slug: "course-scheduling-software",
     title: "Logiciel planification de cours",
     image: "/project_imgs/course_scheduling_software_poster.jpg",
@@ -24,17 +37,31 @@ export const projects: Project[] = [
     gallery: [{ src: "/project_imgs/course_scheduling_software_poster.jpg", caption: "Poster récapitulatif" }],
   },
   {
-    slug: "hotel-reservation-manager",
-    title: "Logiciel gestion d'hôtel",
-    image: "/project_imgs/hotel_reservation_screenshot.png",
-    summary:
-      "Développement d'une application Java pour créer et organiser les réservations d'un hôtel.",
+    slug: "dnn-from-scratch",
+    title: "DNN from scratch",
+    image: "/project_imgs/dnn_MNIST.jpg",
+    summary: "Développement d'un Deep Neural Network avec la librairie Numpy de Python.",
     description: [
-      "Ce projet a été réalisé en quadrinôme dans le cadre académique du cours PRO3600 de Télécom SudParis. L'objectif de ce projet a été de développer de zéro une application de gestion d'un hôtel. Tout d'abord, nous avons imaginé les besoins d'un hôtel en termes de logiciel. Puis, nous avons réalisé des maquettes afin que nous développions tous avec la même image en tête de l'application finale.",
-      "En termes de technologies, nous avons choisi de développer en Java et en JavaFX pour l'interface graphique. La base de données est hébergée sous MySQL.",
+      "Ce projet a été réalisé dans le cadre académique de Télécom SudParis. L'objectif de ce projet a été de développer un Deep Neural Network sur Numpy afin qu'il puisse classifier les chiffres provenant de la base de données MNIST. Le projet se divise en trois étapes d'implémentation : le RBM (Restricted Boltzmann Machine), le DBN (Deep Belief Network) et pour finir le DNN (Deep Neural Network).",
     ],
-    githubUrl: "https://github.com/theoblc/hotel-reservation-manager",
-    gallery: [{ src: "/project_imgs/hotel_reservation_screenshot.png", caption: "Capture d'écran de l'application" }],
+    githubUrl: "https://github.com/theoblc/dnn-from-scratch",
+    gallery: [
+      {
+        src: "/project_imgs/dnn_fig1.png",
+        caption:
+        "Trois graphes correspondant aux résultats du DNN sur MNIST. L'ordonnée correspond au taux d'erreur de classification, c'est-à-dire le pourcentage de mauvaises classifications (mauvais chiffre détecté) par rapport à tous les tests. Le premier graphe en partant de la gauche étudie l'impact de la profondeur du DNN en conservant les autres paramètres fixes à 200 neurones par couche et 10000 données d'entraînement. Le nombre de couche varie de 2 à 9.",
+      },
+      {
+        src: "/project_imgs/dnn_fig2.png",
+        caption:
+        "Le deuxième graphe se concentre sur le nombre de neurones par couche de 100 à 800 neurones. Encore une fois, les autres paramètres sont fixés à 2 couche et 10000 données d'entraînement.",
+      },
+      {
+        src: "/project_imgs/dnn_fig3.png",
+        caption:
+        "Pour le troisième graphe, on étudie l'impact du nombre de données d'entraînement de 1000 à 60000 pour un DNN à deux couches de 200 neurones. Ces trois figures constituent une première exploration d'optimisation des hyperparamètres du DNN.",
+      },
+    ],
   },
   {
     slug: "transfer-learning-finance",
@@ -57,31 +84,17 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "dnn-from-scratch",
-    title: "DNN from scratch",
-    image: "/project_imgs/dnn_MNIST.jpg",
-    summary: "Développement d'un Deep Neural Network avec la librairie Numpy de Python.",
+    slug: "site-web-alexandra-silva",
+    title: "Site web pour Alexandra Silva, diététicienne",
+    image: "/project_imgs/alexandra_silva_og.png",
+    summary:
+    "Développement fullstack d'un site vitrine pour une diététicienne-nutritionniste, de l'expression du besoin à la maintenance continue.",
     description: [
-      "Ce projet a été réalisé dans le cadre académique de Télécom SudParis. L'objectif de ce projet a été de développer un Deep Neural Network sur Numpy afin qu'il puisse classifier les chiffres provenant de la base de données MNIST. Le projet se divise en trois étapes d'implémentation : le RBM (Restricted Boltzmann Machine), le DBN (Deep Belief Network) et pour finir le DNN (Deep Neural Network).",
+      "Ce projet a été réalisé en freelance pour Alexandra Silva, diététicienne-nutritionniste, sur son site alexandrasilvadiet.fr. J'ai piloté seul l'intégralité du projet : recueil du besoin auprès de la cliente, conception des maquettes, développement, mise en production et validation avec la cliente.",
+      "Le site a été développé avec le framework Next.js, puis déployé sur Vercel pour l'hébergement de l'application, avec la gestion du nom de domaine et du DNS assurée via OVHCloud.",
+      "En tant que développeur fullstack unique sur ce projet, j'assure également la maintenance continue du site : mises à jour des dépendances, correction des failles de sécurité (CVE), et évolutions du contenu à la demande de la cliente.",
     ],
-    githubUrl: "https://github.com/theoblc/dnn-from-scratch",
-    gallery: [
-      {
-        src: "/project_imgs/dnn_fig1.png",
-        caption:
-          "Trois graphes correspondant aux résultats du DNN sur MNIST. L'ordonnée correspond au taux d'erreur de classification, c'est-à-dire le pourcentage de mauvaises classifications (mauvais chiffre détecté) par rapport à tous les tests. Le premier graphe en partant de la gauche étudie l'impact de la profondeur du DNN en conservant les autres paramètres fixes à 200 neurones par couche et 10000 données d'entraînement. Le nombre de couche varie de 2 à 9.",
-      },
-      {
-        src: "/project_imgs/dnn_fig2.png",
-        caption:
-          "Le deuxième graphe se concentre sur le nombre de neurones par couche de 100 à 800 neurones. Encore une fois, les autres paramètres sont fixés à 2 couche et 10000 données d'entraînement.",
-      },
-      {
-        src: "/project_imgs/dnn_fig3.png",
-        caption:
-          "Pour le troisième graphe, on étudie l'impact du nombre de données d'entraînement de 1000 à 60000 pour un DNN à deux couches de 200 neurones. Ces trois figures constituent une première exploration d'optimisation des hyperparamètres du DNN.",
-      },
-    ],
+    websiteUrl: "https://alexandrasilvadiet.fr/",
   },
   {
     slug: "site-web-ophelie-claitte",
@@ -97,17 +110,16 @@ export const projects: Project[] = [
     websiteUrl: "https://ocdiet.fr/",
   },
   {
-    slug: "site-web-alexandra-silva",
-    title: "Site web pour Alexandra Silva, diététicienne",
-    image: "/project_imgs/alexandra_silva_og.png",
+    slug: "elementaire",
+    title: "Élémentaire",
+    image: "/project_imgs/elementaire.jpg",
     summary:
-      "Développement fullstack d'un site vitrine pour une diététicienne-nutritionniste, de l'expression du besoin à la maintenance continue.",
+      "Écriture d'un roman de fiction : le parcours d'Aleksandra, une jeune fille recueillie par une famille d'ours après avoir perdu ses parents.",
     description: [
-      "Ce projet a été réalisé en freelance pour Alexandra Silva, diététicienne-nutritionniste, sur son site alexandrasilvadiet.fr. J'ai piloté seul l'intégralité du projet : recueil du besoin auprès de la cliente, conception des maquettes, développement, mise en production et validation avec la cliente.",
-      "Le site a été développé avec le framework Next.js, puis déployé sur Vercel pour l'hébergement de l'application, avec la gestion du nom de domaine et du DNS assurée via OVHCloud.",
-      "En tant que développeur fullstack unique sur ce projet, j'assure également la maintenance continue du site : mises à jour des dépendances, correction des failles de sécurité (CVE), et évolutions du contenu à la demande de la cliente.",
+      "\"Élémentaire\" est un roman de fiction que j'écris en solo depuis maintenant 6 mois, à raison d'une écriture quotidienne. Le brouillon est aujourd'hui terminé et le roman est actuellement en phase de relecture.",
+      "L'histoire suit Aleksandra, une jeune fille qui perd ses parents dans une fusillade. Contrainte de survivre seule dans la forêt, elle fait la rencontre d'une famille d'ours et apprend peu à peu à vivre à leurs côtés. Lorsqu'un loup la prend en chasse en pleine nuit, un être mystérieux décide de la guérir. Pourquoi agit-il ainsi ? Nul ne le sait, mais cette rencontre va une fois de plus bouleverser la vie d'Aleksandra.",
+      "Ce projet, très différent de mes projets informatiques, m'a permis de développer des soft skills nouvelles : de la créativité pour construire un univers et une intrigue cohérents, mais surtout de la ténacité et de la discipline pour tenir un rythme d'écriture quotidien sur plus de 6 mois, jusqu'à l'aboutissement d'un brouillon complet.",
     ],
-    websiteUrl: "https://alexandrasilvadiet.fr/",
   }
 ];
 

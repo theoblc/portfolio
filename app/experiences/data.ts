@@ -1,9 +1,16 @@
+export type ExperienceProject = {
+  title: string;
+  description: string;
+  skills?: string[];
+};
+
 export type Experience = {
   company: string;
   logo: string;
   period: string;
   role?: string;
   content: string[];
+  projects?: ExperienceProject[];
   url?: string;
 };
 
@@ -16,11 +23,57 @@ export const experiences: Experience[] = [
     role: "Ingénieur IA (CDI)",
     content: [
       "A la suite de mon stage de fin d'études, j'ai rejoint [Sagemcom](https://www.sagemcom.com) en CDI en tant qu'ingénieur IA à partir de septembre 2024, poste que j'occupe encore aujourd'hui. Mon rôle couvre à la fois la création et la gestion continue de l'infrastructure IA de l'entreprise ainsi que le pilotage de plusieurs projets liés à l'intelligence artificielle.",
-      "Création et gestion continue de l'infrastructure IA de l'entreprise : cette activité transverse et continue est liée à la création de la nouvelle équipe IA et à son intégration dans l'infrastructure globale de l'entreprise. J'ai commencé par comprendre l'infrastructure IT globale de l'entreprise et les contraintes associées, puis j'ai créé et administré des machines virtuelles (VM) pour déployer les applications IA en préproduction puis en production. Face aux limitations liées à l'absence de GPU sur les VM, j'ai mis en place une infrastructure dédiée : commande de serveurs équipés de GPU, assemblage et préparation des machines, installation en data center, dans le respect des normes, procédures et processus internes de l'entreprise. J'ai ensuite industrialisé les applications IA avec la mise en place de pipelines CI/CD, assuré leur déploiement en production et leur maintenance continue, mis en place le monitoring des applications et de l'infrastructure, géré les problématiques d'authentification et d'accès, et mis à disposition un serveur Ollama interne pour les collaborateurs souhaitant utiliser des modèles d'IA validés et hébergés en interne.",
-      "Projet de mise en production : ce projet, initialement réalisé dans le cadre de mon stage de fin d'études, a été repris, amélioré et industrialisé durant le CDI. J'ai repris le prototype développé pendant le stage, amélioré la solution et ses fonctionnalités, adapté l'ensemble aux contraintes de l'environnement industriel de l'entreprise, puis assuré son industrialisation, sa mise en production et sa maintenance dans le temps.",
-      "Projet de simulation thermique des gateways : ce projet vise à exploiter l'IA et les données historiques de l'entreprise afin de réduire le nombre de simulations thermiques physiques nécessaires aux équipes. L'objectif est d'exploiter la base de données existante de simulations, de prendre en compte les données issues des simulations 3D, de développer une approche basée sur l'IA permettant de prédire et comprendre le comportement thermique des gateways, de réduire le recours aux simulations physiques coûteuses en temps et en ressources, et de fournir aux équipes R&D un outil d'aide à la conception et à la validation.",
-      "Projet MCP et base de connaissances intra-URD : ce projet vise à rendre les connaissances techniques des différentes unités de R&D accessibles de manière centralisée via un MCP (Model Context Protocol). L'approche envisagée consiste à recueillir les besoins auprès de chaque unité de recherche et développement (URD), à agréger les connaissances provenant notamment de GitLab, Confluence et Jira, à construire une base de connaissances exploitable par les assistants IA, puis à mettre ces connaissances à disposition via un MCP connectable depuis différents clients IA, notamment GitHub Copilot mais pas exclusivement. L'objectif est de permettre aux collaborateurs d'interroger les connaissances internes de l'entreprise directement depuis leurs outils IA.",
-      "Projet de revue de code automatique : ce projet consiste en un outil d'analyse et de revue de code assistée par IA. La solution doit pouvoir fonctionner localement de manière autonome, ou être intégrée directement à une instance GitLab Community Edition auto-hébergée par Sagemcom, analyser le code lors d'une Merge Request (MR), identifier les problèmes, erreurs potentielles ou améliorations possibles, générer automatiquement des commentaires et les publier directement dans la MR, au niveau du code concerné. L'objectif est d'automatiser une partie de la revue de code tout en conservant les retours directement dans le workflow de développement des équipes.",
+    ],
+    projects: [
+      {
+        title: "Infrastructure IA de l'entreprise",
+        description:
+          "Activité transverse et continue liée à la création de la nouvelle équipe IA et à son intégration dans l'infrastructure globale de l'entreprise. J'ai commencé par comprendre l'infrastructure IT globale de l'entreprise et les contraintes associées, puis j'ai créé et administré des machines virtuelles (VM) pour déployer les applications IA en préproduction puis en production. Face aux limitations liées à l'absence de GPU sur les VM, j'ai mis en place une infrastructure dédiée : commande de serveurs équipés de GPU, assemblage et préparation des machines, installation en data center, dans le respect des normes, procédures et processus internes de l'entreprise. J'ai ensuite industrialisé les applications IA avec la mise en place de pipelines CI/CD, assuré leur déploiement en production et leur maintenance continue, mis en place le monitoring des applications et de l'infrastructure, géré les problématiques d'authentification et d'accès, et mis à disposition un serveur Ollama interne pour les collaborateurs souhaitant utiliser des modèles d'IA validés et hébergés en interne.",
+        skills: [
+          "Administration système",
+          "Monitoring et supervision",
+          "Gestion des accès et authentification",
+          "Déploiement Ollama",
+        ],
+      },
+      {
+        title: "Mise en production du projet de stage",
+        description:
+          "Ce projet, initialement réalisé dans le cadre de mon stage de fin d'études, a été repris, amélioré et industrialisé durant le CDI. J'ai repris le prototype développé pendant le stage, amélioré la solution et ses fonctionnalités, adapté l'ensemble aux contraintes de l'environnement industriel de l'entreprise, puis assuré son industrialisation, sa mise en production et sa maintenance dans le temps.",
+        skills: [
+          "Industrialisation d'un prototype",
+          "Mise en production (MLOps)",
+          "Adaptation aux contraintes industrielles",
+        ],
+      },
+      {
+        title: "Simulation thermique des gateways",
+        description:
+          "Ce projet vise à exploiter l'IA et les données historiques de l'entreprise afin de réduire le nombre de simulations thermiques physiques nécessaires aux équipes. L'objectif est d'exploiter la base de données existante de simulations, de prendre en compte les données issues des simulations 3D, de développer une approche basée sur l'IA permettant de prédire et comprendre le comportement thermique des gateways, de réduire le recours aux simulations physiques coûteuses en temps et en ressources, et de fournir aux équipes R&D un outil d'aide à la conception et à la validation.",
+        skills: [
+          "Machine learning",
+          "Exploration et nettoyage des données",
+          "Création d'un dataset",
+        ],
+      },
+      {
+        title: "MCP et base de connaissances intra-URD",
+        description:
+          "Ce projet vise à rendre les connaissances techniques des différentes unités de R&D accessibles de manière centralisée via un MCP (Model Context Protocol). L'approche envisagée consiste à recueillir les besoins auprès de chaque unité de recherche et développement (URD), à agréger les connaissances provenant notamment de GitLab, Confluence et Jira, à construire une base de connaissances exploitable par les assistants IA, puis à mettre ces connaissances à disposition via un MCP connectable depuis différents clients IA, notamment GitHub Copilot mais pas exclusivement. L'objectif est de permettre aux collaborateurs d'interroger les connaissances internes de l'entreprise directement depuis leurs outils IA.",
+        skills: [
+          "Model Context Protocol (MCP)",
+          "RAG",
+        ],
+      },
+      {
+        title: "Revue de code automatique",
+        description:
+          "Ce projet consiste en un outil d'analyse et de revue de code assistée par IA. La solution fonctionne localement de manière autonome, ou peut être intégrée directement à une instance GitLab Community Edition auto-hébergée par Sagemcom, analyse le code lors d'une Merge Request (MR), identifie les problèmes, erreurs potentielles ou améliorations possibles, génére automatiquement des commentaires et les publie directement dans la MR, au niveau du code concerné. L'objectif est d'automatiser une partie de la revue de code tout en conservant les retours directement dans le workflow de développement des équipes.",
+        skills: [
+          "Intégration GitLab",
+          "Automatisation de workflow de développement",
+        ],
+      },
     ],
   },
   {
